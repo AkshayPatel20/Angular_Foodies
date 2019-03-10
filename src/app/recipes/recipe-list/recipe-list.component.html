@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col s12">
+    <h5><b>I AM RECIPES LIST COMPONENT</b></h5>
+  </div>
+  <div class="col s12">
+    <button class="waves-effect waves-light btn">New Recipes</button>
+  </div>
+  <div class="col s12">
+      <ul class="collection" *ngFor="let RecipeData of recipes">
+          <li class="collection-item avatar">
+            <img src="{{ RecipeData.imagePath }}" alt="" class="circle">
+            <span class="title">{{ RecipeData.name }}</span>
+            <p>{{ RecipeData.description }}</p>
+            <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+          </li>
+      </ul>
+    <app-recipe-item></app-recipe-item>
+  </div>
+</div>
+
